@@ -26,7 +26,7 @@ x = []
 y = []
 
 
-def loop_da_compounde():
+def loop_compound():
     i = 1
     while i <= time_period:
         y.append(initial_amount *
@@ -35,7 +35,7 @@ def loop_da_compounde():
         i += 1
 
 
-loop_da_compounde()
+loop_compound()
 print("x", x)
 print("y", y)
 plt.bar(x, y, width=0.72)
@@ -47,4 +47,5 @@ low = min(y)
 high = max(y)
 plt.ylim([math.ceil(low-0.1*(high-low)), math.ceil(high+0.1*(high-low))])
 plt.xticks(x)
+plt.savefig("latestgraph.png")
 plt.show()
